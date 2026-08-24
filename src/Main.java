@@ -28,15 +28,27 @@ class Main{
           em uma nova lista.
         */
 
-        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
-        System.out.println("Lista original");
-        numeros.forEach(System.out::println);
+//        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+//        System.out.println("Lista original");
+//        numeros.forEach(System.out::println);
+//
+//        System.out.println("Números imps após a stream");
+//       List<Integer> resultado = numeros.stream()
+//                .filter(n ->  n % 2 > 0)
+//                .map(n -> n * 2)
+//               .collect(Collectors.toList());
+//        System.out.println(resultado);
 
-        System.out.println("Números imps após a stream");
-       List<Integer> resultado = numeros.stream()
-                .filter(n ->  n % 2 > 0)
-                .map(n -> n * 2)
-               .collect(Collectors.toList());
-        System.out.println(resultado);
+
+        // LeetCode #4
+        /*
+        4 - Dada a lista de strings abaixo, remova as duplicatas
+         (palavras que aparecem mais de uma vez) e imprima o resultado.
+         */
+        List<String> palavrasDup = Arrays.asList("apple", "banana", "apple", "orange", "banana");
+            palavrasDup.stream()
+                    .sorted().distinct()
+                    .forEach(System.out::println);
+
     }
 }
