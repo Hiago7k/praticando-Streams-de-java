@@ -15,10 +15,28 @@ class Main{
         // LeetCode #2
         //2 - Dada a lista de strings abaixo, converta todas para letras maiúsculas e imprima-as.
         List<String> palavras = Arrays.asList("java", "stream", "lambda");
+//
+//        palavras.stream()
+//                .map(p -> p.toUpperCase())
+//                .forEach(System.out::println);
 
-        palavras.stream()
-                .map(p -> p.toUpperCase())
-                .forEach(System.out::println);
 
+        // LeetCode #3
+        /*
+        3 - Dada a lista de números inteiros abaixo,
+         filtre os números ímpares, multiplique cada um por 2 e colete os resultados
+          em uma nova lista.
+        */
+
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+        System.out.println("Lista original");
+        numeros.forEach(System.out::println);
+
+        System.out.println("Números imps após a stream");
+       List<Integer> resultado = numeros.stream()
+                .filter(n ->  n % 2 > 0)
+                .map(n -> n * 2)
+               .collect(Collectors.toList());
+        System.out.println(resultado);
     }
 }
