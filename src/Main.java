@@ -45,10 +45,22 @@ class Main{
         4 - Dada a lista de strings abaixo, remova as duplicatas
          (palavras que aparecem mais de uma vez) e imprima o resultado.
          */
-        List<String> palavrasDup = Arrays.asList("apple", "banana", "apple", "orange", "banana");
-            palavrasDup.stream()
-                    .sorted().distinct()
-                    .forEach(System.out::println);
+//        List<String> palavrasDup = Arrays.asList("apple", "banana", "apple", "orange", "banana");
+//            palavrasDup.stream()
+//                    .sorted().distinct()
+//                    .forEach(System.out::println);
 
+        /*
+        5 - Dada a lista de sublistas de números inteiros abaixo,
+         extraia todos os números primos em uma única lista e os ordene em ordem crescente.
+         */
+        List<List<Integer>> listaDeNumeros = Arrays.asList(
+                Arrays.asList(1, 2, 3, 4),
+                Arrays.asList(5, 6, 7, 8),
+                Arrays.asList(9, 10, 11, 12)
+        );
+
+
+        listaDeNumeros.forEach(System.out::println);
     }
 }
